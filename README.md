@@ -15,7 +15,7 @@ The **Boogs77-miniVIC** is a compact, arcade-oriented 8-bit computer built on a 
 
 ## 🧠 System Architecture & Modules
 
-Every section of the board follows the electrical and logical design of a BO6502 module. The full schematic is in [`schematics/miniVIC_C6502_v40.pdf`](schematics/miniVIC_C6502_v40.pdf).
+Every section of the board follows the electrical and logical design of a BO6502 module. The full schematic is in [`schematics/miniVIC_C6502_v41.pdf`](schematics/miniVIC_C6502_v41.pdf).
 
 ### ⚙️ Core Processing Unit (CPU, RAM, ROM)
 * **CPU:** Western Design Center **W65C02S**. Reference: [BO6502 CPU](https://github.com/Boogs77/BO6502_65C02-based_modular_computer/tree/main/BO6502%20CPU).
@@ -151,7 +151,7 @@ Programs loaded from the SD start at **$1000**, with an NMI trampoline at **$0FD
 
 ## 🔗 Useful Links & Resources
 
-* **Schematic:** [miniVIC C6502 v40 (PDF)](schematics/miniVIC_C6502_v40.pdf)
+* **Schematic:** [miniVIC C6502 v41 (PDF)](schematics/miniVIC_C6502_v41.pdf)
 * **Firmware:** [miniVIC BIOS](https://github.com/Boogs77/miniVIC_bios)
 * **Emulator:** [BO6502 · miniVIC Emulator](https://github.com/Boogs77/BO6502-miniVIC-emulator)
 * **Games:** [miniVIC Games](https://github.com/Boogs77/miniVIC_games)
