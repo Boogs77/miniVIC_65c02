@@ -1,0 +1,3 @@
+# local only (Claude instructions with private paths, not published)
+CLAUDE.md
+.claude/
