@@ -168,7 +168,7 @@ The screen edition has cream paper and colour pictures, the print edition white 
 
 ## 🔗 Useful Links & Resources
 
-* **Manual:** [miniVIC Operation Manual (IT/EN)](https://github.com/Boogs77/miniVIC-manual)
+* **Manual:** [miniVIC Operation Manual (IT/EN)](https://github.com/Boogs77/miniVIC-manual) · [BO6502 Operation Manual](https://github.com/Boogs77/BO6502-manual)
 * **Schematic:** [miniVIC C6502 v41 (PDF)](schematics/miniVIC_C6502_v41.pdf)
 * **Firmware:** [miniVIC BIOS](https://github.com/Boogs77/miniVIC_bios)
 * **Emulator:** [BO6502 · miniVIC Emulator](https://github.com/Boogs77/BO6502-miniVIC-emulator)
