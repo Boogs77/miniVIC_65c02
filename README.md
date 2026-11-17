@@ -4,12 +4,13 @@
 ![Video](https://img.shields.io/badge/Video-TMS9918A-blue)
 ![Audio](https://img.shields.io/badge/Audio-2x%20AY--3--8910%20Stereo-yellow)
 ![Board](https://img.shields.io/badge/PCB-Single%20Board-green)
+[![Manual](https://img.shields.io/badge/Manual-IT%20%7C%20EN-orange)](https://github.com/Boogs77/miniVIC-manual)
 
 <p align="center"><img src="gallery/miniVIC_pcb_top.png" width="90%" /></p>
 
-The **Boogs77-miniVIC** is a compact, arcade-oriented 8-bit computer built on a single board. It takes the modular architecture of the [BO6502 System](https://github.com/Boogs77/BO6502_65C02-based_modular_computer) and puts all of its modules on one PCB: a **W65C02S** CPU, a **TMS9918A** video processor with composite output, two **AY-3-8910** sound chips for stereo audio, a PS/2 keyboard, two joysticks, a serial port and an SD card for programs.
+The **Boogs77-miniVIC** is a compact, arcade-oriented 8-bit computer built on a single board. It takes the modular architecture of the [BO6502 System](https://github.com/Boogs77/BO6502_65C02-based_modular_computer) and puts all of its modules on one PCB: a **W65C02S** CPU, a **TMS9918A** video processor with composite output, two **AY-3-8910** sound chips for stereo audio, a DIN5 keyboard, two joysticks, a serial port and an SD card for programs.
 
-### ▶️ [Try it in the browser emulator](https://boogs77.github.io/BO6502-miniVIC-emulator/)
+### ▶️ [Try it in the browser emulator](https://boogs77.github.io/BO6502-miniVIC-emulator/) · 📖 [Read the operation manual](https://github.com/Boogs77/miniVIC-manual)
 
 ---
 
@@ -37,8 +38,9 @@ Every section of the board follows the electrical and logical design of a BO6502
 * **Left channel:** latch **$D384**, write **$D385**.
 * **Reference:** [BO6502 AUDIO](https://github.com/Boogs77/BO6502_65C02-based_modular_computer/tree/main/BO6502%20AUDIO).
 
-### ⌨️ Keyboard Input (PS/2)
-* **Interface:** a **W65C22** VIA reads the PS/2 keyboard through two **74HCT595** shift registers: each scancode arrives on PORTA, with a strobe on CA1.
+### ⌨️ Keyboard Input (DIN5)
+* **Connector:** 5-pin DIN for AT keyboards with the US layout; a PS/2 keyboard works through a passive adapter.
+* **Interface:** a **W65C22** VIA reads the keyboard through two **74HCT595** shift registers: each scancode arrives on PORTA, with a strobe on CA1.
 * **Addressing:** **$D180**.
 * **Reference:** [BO6502 KEYb](https://github.com/Boogs77/BO6502_65C02-based_modular_computer/tree/main/BO6502%20KEYb).
 
@@ -85,12 +87,12 @@ The ROM chip covers **$8000-$FFFF**, but the I/O area **$B000-$DFFF** is decoded
 
 ## 💻 Software & Firmware
 
-The firmware is published in its own repository: **[miniVIC BIOS](https://github.com/Boogs77/miniVIC_bios)** (`bin/boogs.bin`, the 32KB EEPROM image). The current version is **03.11.26 KEYB/SD**.
+The firmware is published in its own repository: **[miniVIC BIOS](https://github.com/Boogs77/miniVIC_bios)** (`bin/boogs.bin`, the 32KB EEPROM image). The current version is **16.11.26 KEYB/SD R2**.
 
 At power-on the BIOS shows a menu on the video output and on the serial terminal:
 1. **WozMon**, the Apple I monitor.
 2. **Microsoft BASIC 1977**.
-3. **SD card programs menu**: games and applications on several pages, started with one key.
+3. **SD card programs menu**: GAMES, APPS, SOUNDS or ALL PROGRAMS, on several pages, started with one key.
 4. **System information**.
 
 Programs loaded from the SD start at **$1000**, with an NMI trampoline at **$0FD0** that the BIOS calls on every vertical blank. They call the BIOS only through the jump table at **$FD00**: its addresses never move.
@@ -112,10 +114,25 @@ Programs loaded from the SD start at **$1000**, with an NMI trampoline at **$0FD
 
 ---
 
+## 📖 Operation Manual
+
+The **[miniVIC Operation Manual](https://github.com/Boogs77/miniVIC-manual)**, in the style of the 1976 Apple-1 manual, describes the whole machine: specification, memory and device maps, address decoding, the schematic, the BOM, every register of the chips, the BIOS and its menus, WozMon, Microsoft BASIC, the applications, the games and the SD card format. It covers BIOS **16.11.26 KEYB/SD R2**.
+
+| Language | Screen edition | Print edition |
+| :--- | :--- | :--- |
+| English | [MiniVIC_Manual_EN.pdf](https://github.com/Boogs77/miniVIC-manual/blob/main/MiniVIC_Manual_EN.pdf) | [MiniVIC_Manual_EN_print.pdf](https://github.com/Boogs77/miniVIC-manual/blob/main/MiniVIC_Manual_EN_print.pdf) |
+| Italian | [MiniVIC_Manual_IT.pdf](https://github.com/Boogs77/miniVIC-manual/blob/main/MiniVIC_Manual_IT.pdf) | [MiniVIC_Manual_IT_print.pdf](https://github.com/Boogs77/miniVIC-manual/blob/main/MiniVIC_Manual_IT_print.pdf) |
+
+The screen edition has cream paper and colour pictures, the print edition white paper and grey pictures.
+
+---
+
 ## 🎮 Games & Applications
 
 * **[miniVIC Games](https://github.com/Boogs77/miniVIC_games):** a collection of arcade games in 65C02 assembly, with stereo music and records saved on the SD card.
-* **[miniVIC Apps](https://github.com/Boogs77/miniVIC_apps):** office applications (Write, Calc, File, Desk, Term, Asm, Mon, Disk).
+* **[miniVIC Apps](https://github.com/Boogs77/miniVIC_apps):** office applications (Write, Calc, File, Desk, Term, Asm, Mon, Disk, Jukebox).
+* **[miniVIC Music](https://github.com/Boogs77/miniVIC_music):** songs for the two AY-3-8910, as programs for the SD card.
+* **[BO6502 SD Builder](https://github.com/Boogs77/bo6502-SDbuilder):** Python tools that build the RAW SD card image with the games, applications and songs for the BIOS menu.
 * **[BO6502 · miniVIC Emulator](https://github.com/Boogs77/BO6502-miniVIC-emulator):** runs the real BIOS, the games and the applications in the browser.
 
 ---
@@ -145,17 +162,20 @@ Programs loaded from the SD start at **$1000**, with an NMI trampoline at **$0FD
 | **2N4401** | NPN Transistor (video output) | 1 |
 | **Oscillator** | 1 MHz | 1 |
 | **Crystals** | 10.738635 MHz (video), 1.8432 MHz (serial) | 1 + 1 |
-| **Connectors** | DB9 (serial, 2x joystick), RCA (video, 2x audio), PS/2 keyboard, SD card module, DC jack | — |
+| **Connectors** | DB9 (serial, 2x joystick), RCA (video, 2x audio), DIN5 keyboard, SD card module, DC jack | — |
 
 ---
 
 ## 🔗 Useful Links & Resources
 
+* **Manual:** [miniVIC Operation Manual (IT/EN)](https://github.com/Boogs77/miniVIC-manual)
 * **Schematic:** [miniVIC C6502 v41 (PDF)](schematics/miniVIC_C6502_v41.pdf)
 * **Firmware:** [miniVIC BIOS](https://github.com/Boogs77/miniVIC_bios)
 * **Emulator:** [BO6502 · miniVIC Emulator](https://github.com/Boogs77/BO6502-miniVIC-emulator)
 * **Games:** [miniVIC Games](https://github.com/Boogs77/miniVIC_games)
 * **Applications:** [miniVIC Apps](https://github.com/Boogs77/miniVIC_apps)
+* **Music:** [miniVIC Music](https://github.com/Boogs77/miniVIC_music)
+* **SD card:** [BO6502 SD Builder](https://github.com/Boogs77/bo6502-SDbuilder)
 * **BO6502 System:** [65C02-based Modular Computer](https://github.com/Boogs77/BO6502_65C02-based_modular_computer)
 * **miniPET:** [The sister project](https://github.com/Boogs77/miniPET_65c02)
 
