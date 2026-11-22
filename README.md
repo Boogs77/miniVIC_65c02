@@ -195,6 +195,13 @@ Programs loaded from the SD start at **$1000**, with an NMI trampoline at **$0FD
 
 ---
 
+## 🎬 Videos
+
+Five-minute explanatory videos, in Italian and English, with subtitles:
+
+* **The miniVIC, the 65C02 arcade computer on a single board**: [Italiano](https://youtu.be/-JVyVr15J_0) · [English](https://youtu.be/Br0R03pKXYs)
+* **The whole project: from the modular BO6502 to miniPET, miniVIC and Arcade6502**: [Italiano](https://youtu.be/3ln8cZt3MQk) · [English](https://youtu.be/d8nvmrTR-eE)
+
 ## 📖 Operation Manual
 
 The **[miniVIC Operation Manual](https://github.com/Boogs77/miniVIC-manual)**, in the style of the 1976 Apple-1 manual, describes the whole machine: specification, memory and device maps, address decoding, the schematic, the BOM, every register of the chips, the BIOS and its menus, WozMon, Microsoft BASIC, the applications, the games and the SD card format. It covers BIOS **16.11.26 KEYB/SD R2**.
