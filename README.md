@@ -227,7 +227,8 @@ A 3D-printed case in the style of the Commodore 64: bone-coloured, with black ba
   <img src="gallery/miniVIC_case_parts.png" width="45%" />
 </p>
 
-* **Size:** 302.3 x 153.0 x 52.5 mm (L x W x H). The back, with the connectors, is the tallest side; the front is lower, about 35.6 mm.
+* **Size:** 302.3 x 153.0 x 52.5 mm (L x W x H) in the design. The back, with the connectors, is the tallest side; the front is lower, about 35.6 mm in the design.
+* **Measured on the printed case:** height at the front 35.2 mm (left, centre and right); at the back 52.8 mm (left), 53.0 mm (centre) and 52.8 mm (right).
 * **Open on top:** the keyboard, a **BTC 5100**, rests on the rim of the case and works as the lid, which gives a small VIC-20 style computer.
 * **Three parts** along the length, joined with tabs and self-tapping screws: the joystick end, the centre part and the power end, so that each one fits on a 250 x 250 mm print bed. Four black panels hold the connectors (serial, RCA and reset, power and LED, joysticks) and four black bands cover the joints.
 * **Printing:** PLA on an Anycubic Kobra S1.
