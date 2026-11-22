@@ -225,6 +225,21 @@ The board has been tested with the resistor as mounted and works.
 
 ---
 
+## 📜 License
+
+The miniVIC is open hardware. You are free to build, use, study, modify and sell it, as long as you credit the author.
+
+| Content | License |
+| :--- | :--- |
+| **Hardware**: schematic, bill of materials | [CERN-OHL-P v2](LICENSE) (permissive) |
+| **Documentation and images**: README, photos, renders | [CC BY 4.0](LICENSE-docs) |
+
+Copyright (c) 2026 Boogs77. Please keep the credit "miniVIC by Boogs77" and a link to this repository in your copies and derivatives.
+
+The firmware is in its own repository, [miniVIC BIOS](https://github.com/Boogs77/miniVIC_bios). It contains third-party code (Microsoft BASIC, WozMon) that is not covered by this license.
+
+---
+
 ## 🔗 Useful Links & Resources
 
 * **Manual:** [miniVIC Operation Manual (IT/EN)](https://github.com/Boogs77/miniVIC-manual) · [BO6502 Operation Manual](https://github.com/Boogs77/BO6502-manual)
