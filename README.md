@@ -90,7 +90,7 @@ The ROM chip covers **$8000-$FFFF**, but the I/O area **$B000-$DFFF** is decoded
 From the schematic [`miniVIC_C6502_v41.pdf`](schematics/miniVIC_C6502_v41.pdf). The pin numbers are the ones of the schematic symbols.
 
 ### ⌨️ Keyboard (JP51A, JP51B)
-The keyboard header is wired to a DIN5 socket for an AT keyboard with the US layout. The keyboard used for the tests is a **BTC 5100**.
+The keyboard header is wired to a DIN5 socket for an AT keyboard with the US layout. The keyboard used for the tests is a **BTC 5100**, the one that goes on top of the case.
 
 | Header pin | Signal | DIN5 pin (AT keyboard) |
 | :--- | :--- | :--- |
@@ -228,7 +228,7 @@ A 3D-printed case in the style of the Commodore 64: bone-coloured, with black ba
 </p>
 
 * **Size:** 302.3 x 153.0 x 52.5 mm (L x W x H). The back, with the connectors, is the tallest side; the front is lower, about 35.6 mm.
-* **Open on top:** the keyboard rests on the rim of the case and works as the lid.
+* **Open on top:** the keyboard, a **BTC 5100**, rests on the rim of the case and works as the lid, which gives a small VIC-20 style computer.
 * **Three parts** along the length, joined with tabs and self-tapping screws: the joystick end, the centre part and the power end, so that each one fits on a 250 x 250 mm print bed. Four black panels hold the connectors (serial, RCA and reset, power and LED, joysticks) and four black bands cover the joints.
 * **Printing:** PLA on an Anycubic Kobra S1.
 * **Status:** the first test print is under way and the joints do not fit perfectly yet, so the STL files are not published. They will be added when the fit is verified.
