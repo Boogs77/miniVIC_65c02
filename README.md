@@ -139,8 +139,59 @@ The screen edition has cream paper and colour pictures, the print edition white 
 
 ## 📋 Bill of Materials (BOM)
 
+195 parts in total, including the IC sockets and the EEPROM. The complete list, with the designators, is in [`bom/miniVIC_BOM.csv`](bom/miniVIC_BOM.csv).
+
+### Integrated circuits
 | Component | Description | Quantity |
 | :--- | :--- | :--- |
+| **W65C02S** | CMOS 8-bit Microprocessor | 1 |
+| **HM62256** | 32K x 8 Static RAM (RAM and VRAM) | 2 |
+| **28C256** | 32K x 8 EEPROM (on a 28-pin ZIF socket) | 1 |
+| **TMS9918A** | Video Display Processor | 1 |
+| **AY-3-8910** | Programmable Sound Generator | 2 |
+| **W65C22 (VIA)** | Versatile Interface Adapter (keyboard, joysticks, SD) | 3 |
+| **W65C51 (ACIA)** | Asynchronous Communications Interface Adapter | 1 |
+| **MAX232** | RS-232 Line Driver | 1 |
+| **NE555** | Timer (Reset Circuit) | 1 |
+| **74AC138** | 3-to-8 Decoder | 7 |
+| **74HC08** | Quad AND Gate | 4 |
+| **74HCT00** | Quad NAND Gate | 2 |
+| **74HC32** | Quad OR Gate | 1 |
+| **74HCT04 / 74HC04** | Hex Inverter | 1 + 1 |
+| **74HCT14** | Hex Schmitt Trigger Inverter | 1 |
+| **74HCT595** | 8-bit Shift Register | 2 |
+| **74HC574** | Octal D Flip-Flop | 2 |
+| **74HC245** | Octal Bus Transceiver | 1 |
+
+### Passive components
+| Component | Value | Quantity |
+| :--- | :--- | :--- |
+| **Resistors** (0207, axial) | 75 Ohm · 330 Ohm · 470 Ohm | 1 · 2 · 1 |
+| | 1k · 3.3k · 4.7k | 7 · 5 · 12 |
+| | 10k · 15k · 47k · 1M | 6 · 1 · 1 · 2 |
+| **Ceramic capacitors** | 20p · 33p | 1 · 2 |
+| | 100n (decoupling) | 38 |
+| | 1u | 4 |
+| **Electrolytic capacitors** | 10uF | 3 |
+| **Diodes** | SB140 (Schottky) · 1N4148 | 5 · 1 |
+| **Ferrite bead** | | 1 |
+
+### Other components
+| Component | Description | Quantity |
+| :--- | :--- | :--- |
+| **2N4401** | NPN Transistor (video output) | 1 |
+| **LED** | Red 5mm (power) | 1 |
+| **Oscillator** | 1 MHz, DIL14 | 1 |
+| **Crystals** | 10.738635 MHz (video), 1.8432 MHz (serial) | 1 + 1 |
+| **IC sockets** | DIP 40 pin · 28 pin · 20 pin · 16 pin · 14 pin · 8 pin (one per IC) | 7 · 3 · 3 · 10 · 10 · 1 |
+| **ZIF socket** | 28 pin, for the 28C256 EEPROM | 1 |
+| **Connectors** | DB9 female (serial, 2x joystick) | 3 |
+| | RCA (video yellow, audio left white, audio right red) | 3 |
+| | DIN5 keyboard, SD card module, DC jack (SPC4078) | 1 + 1 + 1 |
+| **Switch** | Tactile push-button (reset) | 1 |
+| **Pin headers and jumpers** | expansion, keyboard, SD, video and cassette jumpers | 17 + 2 |
+
+--- | :--- | :--- |
 | **W65C02S** | CMOS 8-bit Microprocessor | 1 |
 | **HM62256** | 32K x 8 Static RAM (RAM and VRAM) | 2 |
 | **28C256** | 32K x 8 EEPROM (on a 28-pin ZIF socket) | 1 |
@@ -166,6 +217,14 @@ The screen edition has cream paper and colour pictures, the print edition white 
 
 ---
 
+## ⚠️ Known Issue (PCB ver 1.0)
+
+The footprint of resistor **R87**, one of the joystick pull-up resistors, is placed incorrectly on the PCB: it is not in line with the others. The resistor was mounted anyway, in the position the board gives it, and the board works normally.
+
+The board has been tested with the resistor as mounted and works.
+
+---
+
 ## 🔗 Useful Links & Resources
 
 * **Manual:** [miniVIC Operation Manual (IT/EN)](https://github.com/Boogs77/miniVIC-manual) · [BO6502 Operation Manual](https://github.com/Boogs77/BO6502-manual)
@@ -183,7 +242,14 @@ The screen edition has cream paper and colour pictures, the print edition white 
 
 ## 🖼️ Project Gallery
 
-PCB ver 1.0: 3D render and copper layout.
+PCB ver 1.0: the real board, assembled and bare.
+
+<p align="center">
+  <img src="gallery/miniVIC_board_assembled.jpg" width="30%" />
+  <img src="gallery/miniVIC_board_bare.jpg" width="30%" />
+</p>
+
+3D render and copper layout.
 
 <p align="center">
   <img src="gallery/miniVIC_pcb_3d.png" width="45%" />
