@@ -197,10 +197,21 @@ Programs loaded from the SD start at **$1000**, with an NMI trampoline at **$0FD
 
 ## 🎬 Videos
 
-Five-minute explanatory videos, in Italian and English, with subtitles:
+Five-minute explanatory videos, in Italian and English, with subtitles. Click a picture to watch the video on YouTube.
 
-* **The miniVIC, the 65C02 arcade computer on a single board**: [Italiano](https://youtu.be/-JVyVr15J_0) · [English](https://youtu.be/Br0R03pKXYs)
-* **The whole project: from the modular BO6502 to miniPET, miniVIC and Arcade6502**: [Italiano](https://youtu.be/3ln8cZt3MQk) · [English](https://youtu.be/d8nvmrTR-eE)
+**The miniVIC, the 65C02 arcade computer on a single board**
+
+<table><tr>
+<td align="center"><a href="https://youtu.be/-JVyVr15J_0"><img src="https://img.youtube.com/vi/-JVyVr15J_0/mqdefault.jpg" width="300" alt="The miniVIC, the 65C02 arcade computer on a single board (Italiano)"></a><br>Italiano</td>
+<td align="center"><a href="https://youtu.be/Br0R03pKXYs"><img src="https://img.youtube.com/vi/Br0R03pKXYs/mqdefault.jpg" width="300" alt="The miniVIC, the 65C02 arcade computer on a single board (English)"></a><br>English</td>
+</tr></table>
+
+**The whole project: from the modular BO6502 to miniPET, miniVIC and Arcade6502**
+
+<table><tr>
+<td align="center"><a href="https://youtu.be/3ln8cZt3MQk"><img src="https://img.youtube.com/vi/3ln8cZt3MQk/mqdefault.jpg" width="300" alt="The whole project: from the modular BO6502 to miniPET, miniVIC and Arcade6502 (Italiano)"></a><br>Italiano</td>
+<td align="center"><a href="https://youtu.be/d8nvmrTR-eE"><img src="https://img.youtube.com/vi/d8nvmrTR-eE/mqdefault.jpg" width="300" alt="The whole project: from the modular BO6502 to miniPET, miniVIC and Arcade6502 (English)"></a><br>English</td>
+</tr></table>
 
 ## 📖 Operation Manual
 
