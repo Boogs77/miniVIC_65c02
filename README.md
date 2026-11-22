@@ -16,7 +16,7 @@ The **Boogs77-miniVIC** is a compact, arcade-oriented 8-bit computer built on a 
 
 ## 🧠 System Architecture & Modules
 
-Every section of the board follows the electrical and logical design of a BO6502 module. The full schematic is in [`schematics/miniVIC_C6502_v41.pdf`](schematics/miniVIC_C6502_v41.pdf).
+Every section of the board follows the electrical and logical design of a BO6502 module. The full schematic is in [`schematics/miniVIC_C6502_v41.pdf`](schematics/miniVIC_C6502_v41.pdf). The Gerber files of the 2-layer PCB (v52, the version made by JLCPCB) are in [`gerber/C6502_v52_gerber.zip`](gerber/C6502_v52_gerber.zip), with the drill file.
 
 ### ⚙️ Core Processing Unit (CPU, RAM, ROM)
 * **CPU:** Western Design Center **W65C02S**. Reference: [BO6502 CPU](https://github.com/Boogs77/BO6502_65C02-based_modular_computer/tree/main/BO6502%20CPU).
@@ -221,7 +221,7 @@ The screen edition has cream paper and colour pictures, the print edition white 
 
 The footprint of resistor **R87**, one of the joystick pull-up resistors, is placed incorrectly on the PCB: it is not in line with the others. The resistor was mounted anyway, in the position the board gives it, and the board works normally.
 
-The board has been tested with the resistor as mounted and works.
+The board has been tested with the resistor as mounted and works. The Gerber files in `gerber/` are the ones the board was made from, so they contain this footprint.
 
 ---
 
@@ -244,6 +244,7 @@ The firmware is in its own repository, [miniVIC BIOS](https://github.com/Boogs77
 
 * **Manual:** [miniVIC Operation Manual (IT/EN)](https://github.com/Boogs77/miniVIC-manual) · [BO6502 Operation Manual](https://github.com/Boogs77/BO6502-manual)
 * **Schematic:** [miniVIC C6502 v41 (PDF)](schematics/miniVIC_C6502_v41.pdf)
+* **PCB:** [Gerber files, v52 (ZIP)](gerber/C6502_v52_gerber.zip)
 * **Firmware:** [miniVIC BIOS](https://github.com/Boogs77/miniVIC_bios)
 * **Emulator:** [BO6502 · miniVIC Emulator](https://github.com/Boogs77/BO6502-miniVIC-emulator)
 * **Games:** [miniVIC Games](https://github.com/Boogs77/miniVIC_games)
