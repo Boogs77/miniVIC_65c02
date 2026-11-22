@@ -206,13 +206,6 @@ Five-minute explanatory videos, in Italian and English, with subtitles. Click a 
 <td align="center"><a href="https://youtu.be/Br0R03pKXYs"><img src="https://img.youtube.com/vi/Br0R03pKXYs/mqdefault.jpg" width="300" alt="The miniVIC, the 65C02 arcade computer on a single board (English)"></a><br>English</td>
 </tr></table>
 
-**The whole project: from the modular BO6502 to miniPET, miniVIC and Arcade6502**
-
-<table><tr>
-<td align="center"><a href="https://youtu.be/3ln8cZt3MQk"><img src="https://img.youtube.com/vi/3ln8cZt3MQk/mqdefault.jpg" width="300" alt="The whole project: from the modular BO6502 to miniPET, miniVIC and Arcade6502 (Italiano)"></a><br>Italiano</td>
-<td align="center"><a href="https://youtu.be/d8nvmrTR-eE"><img src="https://img.youtube.com/vi/d8nvmrTR-eE/mqdefault.jpg" width="300" alt="The whole project: from the modular BO6502 to miniPET, miniVIC and Arcade6502 (English)"></a><br>English</td>
-</tr></table>
-
 ## 📖 Operation Manual
 
 The **[miniVIC Operation Manual](https://github.com/Boogs77/miniVIC-manual)**, in the style of the 1976 Apple-1 manual, describes the whole machine: specification, memory and device maps, address decoding, the schematic, the BOM, every register of the chips, the BIOS and its menus, WozMon, Microsoft BASIC, the applications, the games and the SD card format. It covers BIOS **16.11.26 KEYB/SD R2**.
