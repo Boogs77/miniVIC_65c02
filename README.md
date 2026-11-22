@@ -245,8 +245,8 @@ The board has been tested with the resistor as mounted and works.
 PCB ver 1.0: the real board, assembled and bare.
 
 <p align="center">
-  <img src="gallery/miniVIC_board_assembled.jpg" width="30%" />
-  <img src="gallery/miniVIC_board_bare.jpg" width="30%" />
+  <img src="gallery/miniVIC_board_assembled.jpg" width="45%" />
+  <img src="gallery/miniVIC_board_bare.jpg" width="45%" />
 </p>
 
 3D render and copper layout.
