@@ -210,6 +210,23 @@ The screen edition has cream paper and colour pictures, the print edition white 
 
 ---
 
+## 🏗️ Enclosure (in development)
+
+A 3D-printed case in the style of the Commodore 64: bone-coloured, with black bands and the engraved lettering "MiniVIC by Boogs". It is designed in Autodesk Fusion.
+
+<p align="center">
+  <img src="gallery/miniVIC_case_iso.png" width="45%" />
+  <img src="gallery/miniVIC_case_parts.png" width="45%" />
+</p>
+
+* **Size:** 302.3 x 153.0 x 52.5 mm (L x W x H). The back, with the connectors, is the tallest side; the front is lower, about 35.6 mm.
+* **Open on top:** the keyboard rests on the rim of the case and works as the lid.
+* **Three parts** along the length, joined with tabs and self-tapping screws: the joystick end, the centre part and the power end, so that each one fits on a 250 x 250 mm print bed. Four black panels hold the connectors (serial, RCA and reset, power and LED, joysticks) and four black bands cover the joints.
+* **Printing:** PLA on an Anycubic Kobra S1.
+* **Status:** the first test print is under way and the joints do not fit perfectly yet, so the STL files are not published. They will be added when the fit is verified.
+
+---
+
 ## 📋 Bill of Materials (BOM)
 
 195 parts in total, including the IC sockets and the EEPROM. The complete list, with the designators, is in [`bom/miniVIC_BOM.csv`](bom/miniVIC_BOM.csv).
