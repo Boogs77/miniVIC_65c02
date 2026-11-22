@@ -133,6 +133,14 @@ One 6-pin header for an SD card module, SPI bit-banged on the SD VIA.
 ### 🔌 Serial (X1)
 DB9 connector with a **MAX232** (RS-232 levels), 19200 baud, 8 data bits, no parity, 1 stop bit. CTS, DCD and DSR of the W65C51 are tied to ground, so there is no hardware flow control.
 
+| DB9 pin | Signal |
+| :--- | :--- |
+| **2** | TXD: data sent by the miniVIC |
+| **3** | RXD: data received by the miniVIC |
+| **5** | GND |
+
+The other pins are not connected. Pin 2 is the output of the miniVIC, so a straight serial cable connects it to a PC.
+
 ### 🧩 Expansion headers
 | Header | Pins 1-4 |
 | :--- | :--- |
