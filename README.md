@@ -85,6 +85,79 @@ The ROM chip covers **$8000-$FFFF**, but the I/O area **$B000-$DFFF** is decoded
 
 ---
 
+## 🔌 Connector Pinouts
+
+From the schematic [`miniVIC_C6502_v41.pdf`](schematics/miniVIC_C6502_v41.pdf). The pin numbers are the ones of the schematic symbols.
+
+### ⌨️ Keyboard (JP51A, JP51B)
+The keyboard header is wired to a DIN5 socket for an AT keyboard with the US layout. The keyboard used for the tests is a **BTC 5100**.
+
+| Header pin | Signal | DIN5 pin (AT keyboard) |
+| :--- | :--- | :--- |
+| **JP51A-1** | +5V | 5 |
+| **JP51A-2** | GND | 4 |
+| **JP51A-3** | not connected | |
+| **JP51B-1** | not connected | |
+| **JP51B-2** | KB_DATA | 2 |
+| **JP51B-3** | KB_CLK | 1 |
+
+### 🕹️ Joysticks (JOY1, JOY2)
+Two DB9 connectors, Sega Master System standard. Every contact closes to ground, and the 4.7k pull-up resistors are on the board; +5V is not brought to the connector.
+
+| DB9 pin | Signal | JOY1 (player 1) | JOY2 (player 2) |
+| :--- | :--- | :--- | :--- |
+| **1** | Up | **$D581** bit 0 (PA0) | **$D580** bit 0 (PB0) |
+| **2** | Down | **$D581** bit 1 (PA1) | **$D580** bit 1 (PB1) |
+| **3** | Left | **$D581** bit 2 (PA2) | **$D580** bit 2 (PB2) |
+| **4** | Right | **$D581** bit 3 (PA3) | **$D580** bit 3 (PB3) |
+| **5** | not connected | | |
+| **6** | Button 1 | **$D581** bit 4 (PA4) | **$D580** bit 4 (PB4) |
+| **7** | not connected | | |
+| **8** | GND | GND | GND |
+| **9** | Button 2 | **$D581** bit 5 (PA5) | **$D580** bit 5 (PB5) |
+
+The symbols in the schematic number these pins in mirror order (JOY pin 1 is pin 5 in the schematic, 2 is 4, 3 is 3, 4 is 2, 5 is 1, 6 is 9, 7 is 8, 8 is 7 and 9 is 6).
+
+### 💾 SD Card (JP92, JP93)
+One 6-pin header for an SD card module, SPI bit-banged on the SD VIA.
+
+| Header | Pin | Signal | VIA |
+| :--- | :--- | :--- | :--- |
+| **JP92** | 1 | GND | |
+| **JP92** | 2 | +5V | |
+| **JP92** | 3 | MISO | PA1 |
+| **JP93** | 1 | MOSI | PA2 |
+| **JP93** | 2 | SCK | PA3 |
+| **JP93** | 3 | CS | PA4 |
+
+### 🔌 Serial (X1)
+DB9 connector with a **MAX232** (RS-232 levels), 19200 baud, 8 data bits, no parity, 1 stop bit. CTS, DCD and DSR of the W65C51 are tied to ground, so there is no hardware flow control.
+
+### 🧩 Expansion headers
+| Header | Pins 1-4 |
+| :--- | :--- |
+| **JP1** | 1 +5V · 2 GND · 3 PHI0 |
+| **JP2A** | D7 · D6 · D5 · D4 |
+| **JP2B** | D3 · D2 · D1 · D0 |
+| **JP3A** | A15 · A14 · A13 · A12 |
+| **JP3B** | A11 · A10 · A9 · A8 |
+| **JP3C** | A7 · A6 · A5 · A4 |
+| **JP3D** | A3 · A2 · A1 · A0 |
+| **JP94** | PA0 · PA5 · PA6 · PA7 (SD VIA, port A) |
+| **JP95** | PB0 · PB1 · PB2 · PB3 (SD VIA, port B) |
+| **JP96** | PB4 · PB5 · PB6 · PB7 (SD VIA, port B) |
+
+### 🔋 Power
+5V regulated DC on a barrel jack (J1), with a red power LED.
+
+---
+
+## ✅ Tested Hardware
+
+The miniVIC is fully tested on the real board: video, audio, SD card, joysticks, serial port and keyboard, all working.
+
+---
+
 ## 💻 Software & Firmware
 
 The firmware is published in its own repository: **[miniVIC BIOS](https://github.com/Boogs77/miniVIC_bios)** (`bin/boogs.bin`, the 32KB EEPROM image). The current version is **16.11.26 KEYB/SD R2**.
