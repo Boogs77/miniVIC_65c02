@@ -231,7 +231,8 @@ A 3D-printed case in the style of the Commodore 64: bone-coloured, with black ba
 * **Open on top:** the keyboard, a **BTC 5100**, rests on the rim of the case and works as the lid, which gives a small VIC-20 style computer.
 * **Three parts** along the length, joined with tabs and self-tapping screws: the joystick end, the centre part and the power end, so that each one fits on a 250 x 250 mm print bed. Four black panels hold the connectors (serial, RCA and reset, power and LED, joysticks) and four black bands cover the joints.
 * **Printing:** PLA on an Anycubic Kobra S1.
-* **Status:** the first test print is under way and the joints do not fit perfectly yet, so the STL files are not published. They will be added when the fit is verified.
+* **STL files:** the 11 parts are in [`case/`](case/): `C64_Pezzo_1_joystick`, `C64_Pezzo_2_centrale` and `C64_Pezzo_3_alimentazione` (the three parts), the four `C64_Pannello_*` panels and the four `C64_Fascia_*` bands (front and back of each of the two joints). Units are millimetres.
+* **Status:** work in progress. The first test print is under way and the joints do not fit perfectly yet (a height difference of 0.6-0.8 mm at the joystick joint), so the files may change after the test prints.
 
 ---
 
@@ -329,7 +330,7 @@ The miniVIC is open hardware. You are free to build, use, study, modify and sell
 
 | Content | License |
 | :--- | :--- |
-| **Hardware**: schematic, bill of materials | [CERN-OHL-P v2](LICENSE) (permissive) |
+| **Hardware**: schematic, Gerber files, bill of materials, case STL files | [CERN-OHL-P v2](LICENSE) (permissive) |
 | **Documentation and images**: README, photos, renders | [CC BY 4.0](LICENSE-docs) |
 
 Copyright (c) 2026 Boogs77. Please keep the credit "miniVIC by Boogs77" and a link to this repository in your copies and derivatives.
