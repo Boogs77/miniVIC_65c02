@@ -34,8 +34,8 @@ Every section of the board follows the electrical and logical design of a BO6502
 
 ### 🔊 Audio (2 x AY-3-8910)
 * **Output:** stereo, one chip per channel, each with its three voices mixed on an RCA connector.
-* **Right channel:** latch **$D380**, write **$D381**.
-* **Left channel:** latch **$D384**, write **$D385**.
+* **Right channel:** latch **$D380**, write **$D381**, read **$D382**.
+* **Left channel:** latch **$D384**, write **$D385**, read **$D386**.
 * **Reference:** [BO6502 AUDIO](https://github.com/Boogs77/BO6502_65C02-based_modular_computer/tree/main/BO6502%20AUDIO).
 
 ### ⌨️ Keyboard Input (DIN5)
